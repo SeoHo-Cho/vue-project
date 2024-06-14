@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* 상품정보등록 - 상품기본정보 */
+.registerInfo{}
+.registerInfo .optionRow{align-items: center;}
+.registerInfo .optionRow.item2 .itemWrap{flex:1 0 50%;margin:10px 0;display: flex;justify-content: space-between;}
+.registerInfo .optionRow.item2 .itemWrap .item{align-items: center;flex: 1 0 calc(25% - 28px);margin: 0 14px;}
+.registerInfo .optionRow .item .multOption{display: flex;}
+.registerInfo .optionRow .item .multOption .inputBase,.optionRow .item .multOption .selectBase{width: calc(50% - 14px);}
+.registerInfo .optionRow .item .multOption .baseBtn{margin-left: 8px;}
+.registerInfo .optionRow .item .multOption .baseBtn>.base{padding:0 14px;}
+.registerInfo .optionGroup .comboCk .inputBase{width: calc(100% - 98px);}
+.registerInfo .multArea{display: flex;align-items: center;}
+.registerInfo .multArea .inputBase{flex:auto;}
+.registerInfo .multArea .infoTxt{flex-shrink: 0;font-size: 15px;margin-left: 8px;}
+.registerInfo .halfArea{display: flex;align-items: center;justify-content: space-between;}
+.registerInfo .halfArea *{width: calc(50% - 4px);}
+.registerInfo .optionGroup.optionCol .item{display:block;}
+.registerInfo .optionGroup.optionCol .item .optTit{display:block;margin-bottom:8px;}
+.registerInfo .optionGroup .comboCk .selectBase{margin-right: 8px;}
+.registerInfo .optionRow.item3{align-items: baseline;}
+.registerInfo .optionRow.item3 .item{flex:1 0 calc(25% - 28px)}
+.registerInfo .optionRow.item3 .itemWrap{flex:1 0 75%;}
+.registerInfo .optionRow.item3 .itemWrap .selectGroup{display: flex;align-items: center;flex-wrap: wrap;}
+.registerInfo .optionRow.item3 .itemWrap .selectGroup .inputBox{margin:0 21px 0 0;}
+.registerInfo .optionRow.item3 .itemWrap .baseBtn{margin-right: 21px;}
+.registerInfo .optionRow.item3 .itemWrap .baseBtn>.base{padding:0 14px;}
+
+/* 상품정보등록 - 바코드,매입단가,매출단가 */
+.registerInfo .barcodeArea{margin-top: 20px;border-bottom:1px solid #D4D8E3;}
+.registerInfo .contTable.yScroll table tr:last-child{border-bottom: 0;}
+.writeArea{margin: 30px 0;}
+.writeArea .optionRow .item{margin: 4px 30px 4px 0;flex:inherit;display:inline-block;}
+.writeArea .optionRow .item .optTit{width: auto;padding-right: 8px;}
+.writeArea .optionRow .item .inputBase{max-width: 100px;}
+.writeArea .optionRow .item .inputBase.short{max-width: 140px;}
+.writeArea .optionRow .item span{display: inline-block;padding: 0 8px;}
+
+/* 상품정보등록 - 그룹단가 */
+.registerInfo .optionRow .contTable{margin: 10px 14px 0;}
+.registerInfo .optionTitle.right{justify-content: end;}
+.registerInfo .optionTitle .txtGroup{display: inline-block;font-size: 0;vertical-align: middle;}
+
+
+@media only screen and (max-width:1460px){
+    .registerInfo .optionRow.item3 .itemWrap .selectGroup .inputBox{margin:0 14px 0 0;}
+    .registerInfo .optionRow.item3 .itemWrap .baseBtn{margin-right: 14px;}
+}
+
+@media only screen and (max-width:1300px){
+    .registerInfo .optionRow.item2 .itemWrap{margin: 8px 10px;flex: 1 0 calc(50% - 20px);}
+    .registerInfo .optionRow.item2 .itemWrap .item{margin: 0 4px;flex:1 0 calc(25% - 8px);}
+}
+
+@media only screen and (max-width:1024px){
+    
+}
+

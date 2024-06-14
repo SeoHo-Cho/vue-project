@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* 컨텐츠 공통 */
+/* 옵션영역 */
+.inqBox{position:relative;width:100%;border-radius:8px;background-color:#F8FAFD;padding:20px 15px;margin-bottom:30px;}
+.inqBox .multOption{display:flex;}
+.inqBox .multOption .baseBtn{flex-shrink:0;margin-left:8px;}
+.inqBox .multOption .baseBtn>.base{min-width:auto;padding:0 25px}
+
+.inqBox.sech .optionRow .item{max-width:666px;margin:10px auto;}
+.inqBox.sech .item .optTit{width:auto;padding-right:20px;}
+.inqBox.sech .resetBtn{right:24px;top:50%;transform:translate(0,-50%);}
+
+.inqBox .data{font-size:0;width:100%;}
+.inqBox .data .inputBase{width:calc(50% - 13px);}
+.inqBox .data>span{margin:0 8px;font-size:15px;width:10px;vertical-align:middle;}
+
+.contGorup.half{font-size:0;width:100%;}
+.contGorup.half .division{width:calc(50% - 15px);vertical-align:top;display:inline-block;}
+.contGorup.half .division:nth-of-type(2n){margin-left:30px;}
+
+.contGorup:not(.half) .division .contTit1{margin-bottom:13px;}
+.contGorup:not(.half) .division:nth-of-type(n+2){margin-top:30px;}
+
+/* 본문 입력항목 */
+.lineBox{width:100%;background-color:#fff;border:1px solid #D4D8E3;border-radius:8px;padding:14px 10px;}
+.lineBox .row{display:flex;flex-wrap:wrap;width:100%;}
+.lineBox .row.flexEnd{align-items:flex-end;}
+.lineBox .row.pexis .formInput{flex-grow:0;}
+.lineBox .formInput{margin:10px 15px;flex:1 0 calc(25% - 30px);}
+.lineBox .formInput.half{flex-basis:calc(50% - 30px);}
+.lineBox .formInput.full{flex-basis:calc(100% - 30px);}
+.lineBox .formInput .multOption{display:flex;align-items:center;}
+.lineBox .formInput .multOption .sechBox{flex:auto;}
+.lineBox .formInput .multOption .infoTxt{flex-shrink:0;font-size:15px;margin-left:8px;}
+.lineBox .formInput .multOption.request{}
+.lineBox .formInput .multOption.request .baseBtn>span{padding:0;width:92px;min-width:92px;flex-shrink:0;margin-left:8px;}
+.lineBox .unitArea{display:flex;align-items:center;}
+.lineBox .unitArea .unit{font-size:15px;flex-shrink:0;margin-left:8px;}
+.lineBox .unitArea.licenseeNumber .inputBase{flex-basis:calc(50% - 15px);}
+
+.lineBox .inqCkArea{display:flex;align-items:center;}
+.lineBox .inqCkArea .inputBase{flex-basis:calc(50% - 15px);}
+.lineBox .inqCkArea .selectGroup{flex:1;margin-left:15px;}
+
+.lineBox .selectGroup{margin-bottom:-10px;}
+.lineBox .inputBox{margin-right:24px;margin-bottom:10px;}
+.lineBox .inputBox:last-of-type{margin-right:0;}
+
+.lineBox .addressArea{display:flex;align-items:center;}
+.lineBox .addressArea .address_1{flex-basis:calc(25% - 20px);font-size:0;margin-right:30px;}
+.lineBox .addressArea .address_1 .inputBase{width:calc(100% - 88px);vertical-align:middle;}
+.lineBox .addressArea .address_1 .baseBtn{vertical-align:middle;}
+.lineBox .addressArea .address_1 .baseBtn>.base{min-width:80px;width:80px;padding:0;margin-left:8px;}
+.lineBox .addressArea .address_2{flex-basis:75%;font-size:0;}
+.lineBox .addressArea .address_2 .inputBase{display:inline-block;width:calc(50% - 15px);}
+.lineBox .addressArea .address_2 .inputBase:nth-of-type(2){margin-left:30px;}
+
+.lineBox .telArea{display:flex;}
+.lineBox .telArea .selectBase{flex-basis:90px;margin-right:8px;flex-shrink:0;}
+
+
+.pop_wrap .lineBox .formInput{margin-left:10px;margin-right:10px;flex-basis:calc(25% - 20px);}
+.pop_wrap .lineBox .formInput.half{flex-basis:calc(50% - 20px);}
+.pop_wrap .lineBox .telArea .selectBase{flex-basis:77px;}
+.pop_wrap .lineBox .addressArea .address_1{margin-right:20px;}
+.pop_wrap .lineBox .addressArea .address_2 .inputBase:nth-of-type(2){margin-left:20px;}
+
+.scheduleForm{width:100%;}
+.scheduleForm .line1{font-size:0;vertical-align:middle;margin-bottom:8px;}
+.scheduleForm .selectBase{width:90px;vertical-align:middle;margin-right:20px;}
+.scheduleForm .line1 .inputBox{vertical-align:middle;}
+.scheduleForm .line1 .optGroup{margin-bottom:-7px;display:inline-block;vertical-align:middle;font-size:0;}
+.scheduleForm .line2{font-size:0;}
+.scheduleForm .line2 .selectBase{margin-right:8px;}
+.scheduleForm .line2 .multOption{display:inline-flex;margin-right:20px;}
+.scheduleForm .line2 .multOption:last-of-type{margin-right:0;}
+/* **************************************** 컨텐츠 공통 */
+
+/* 메뉴관리 */
+/* .menuManageArea .contGorup.half .division{width:calc(50% - 15px);}
+.menuManageArea .contGorup.half .division:nth-of-type(2n){margin-left:30px;margin-top:0;} */
+.menuTreeArea{position:relative;border-top:1px solid #646A7A;padding:25px 0 25px 25px;height:500px;overflow-y:auto}
+.menuTreeArea .inputBox .data{font-weight:500;}
+.menuTreeArea .inputBox .data i{position:relative;display:inline-block;font-style:normal;font-size:inherit;line-height:inherit;color:inherit;margin-right:2px;padding-right:3px;}
+.menuTreeArea .inputBox .data i:first-of-type{margin-left:4px;}
+.menuTreeArea .inputBox .data i:last-of-type{margin-right:0;padding-right:0;}
+.menuTreeArea .inputBox .data i:last-of-type::before{display:none;}
+.menuTreeArea .inputBox .data i::before{content:"";position:absolute;right:0;top:4px;display:block;width:1px;height:14px;background-color:#212736;}
+.menuTreeArea .inputBox:hover .data{color:var(--primary);}
+
+.menuTreeArea .depth2{padding-left:28px;}
+.menuTreeArea .depth2>li{position:relative;margin-top:20px;}
+.menuTreeArea .depth2>li::before{content:"";position:absolute;left:-18px;top:13px;display:block;width:20px;height:1px;border-top:1px dashed #D1D1D1;}
+.menuTreeArea .depth2>li::after{content:"";position:absolute;left:-18px;top:-29px;display:block;width:1px;height:calc(100% + 63px);border-left:1px dashed #D1D1D1;}
+.menuTreeArea .depth2>li:last-of-type::after{display:none;}
+.menuTreeArea .depth2>li>.inputBox>input[type=checkbox] + .data{background:url(../img/common/icon_checkOff.svg) no-repeat left top 3px/20px auto, url(../img/contents/icon_menuFolder.svg) no-repeat left 28px top 6px;padding-left:51px;}
+.menuTreeArea .depth2>li>.inputBox>input[type=checkbox]:checked + .data{background:url(../img/common/icon_checkOn.svg) no-repeat left top 3px/20px auto, url(../img/contents/icon_menuFolder.svg) no-repeat left 28px top 6px;}
+
+.menuTreeArea .depth3{padding-left:28px;}
+.menuTreeArea .depth3>li{position:relative;margin-top:15px;}
+.menuTreeArea .depth3>li::after{content:"";position:absolute;left:-18px;top:-28px;display:block;width:1px;height:calc(100% + 15px);border-left:1px dashed #D1D1D1;}
+.menuTreeArea .depth3>li::before{content:"";position:absolute;left:-18px;top:13px;display:block;width:19px;height:1px;border-top:1px dashed #D1D1D1;}
+.menuTreeArea .depth3>li>.inputBox>input[type=checkbox] + .data{background:url(../img/common/icon_checkOff.svg) no-repeat left top 3px/20px auto, url(../img/contents/icon_menuFile.svg) no-repeat left 28px top 4px;padding-left:47px;}
+.menuTreeArea .depth3>li>.inputBox>input[type=checkbox]:checked + .data{background:url(../img/common/icon_checkOn.svg) no-repeat left top 3px/20px auto, url(../img/contents/icon_menuFile.svg) no-repeat left 28px top 4px;}
+
+.menuSechPop .inqBox.sech .optionRow .item{max-width:640px;}
+
+/*권한관리*/
+.rollManageArea .inqBox.sech .optionRow .item{max-width:540px;}
+.rollManageArea .contGorup.half .division:nth-of-type(1){width:390px;}
+.rollManageArea .contGorup.half .division:nth-of-type(2){width:calc(100% - 420px);}
+
+/*시스템 공통분류코드*/
+.sortManageArea .lineBox{height:500px;}
+
+/*시스템 공통코드*/
+.systemcodeManageArea .optionRow .item .optTit{width:auto;padding-right:20px;}
+.systemcodeManageArea .lineBox{height:500px;}
+
+/*배치처리결과*/
+.errorMsgBox{width:100%;border:1px solid #D4D8E3;border-radius:4px;height:208px;overflow-y:auto;padding:11px 14px;}
+
+/*시스템이력관리*/
+.systemHisManageArea .lineBox{min-height:500px;}
+
+@media only screen and (max-width:1600px){
+    .scheduleForm .line1 .optGroup{width:100%;margin-top:8px;}
+}
+
+@media only screen and (max-width:1400px){
+    .lineBox .formInput{flex:1 0 calc(50% - 30px);}
+    .lineBox .formInput.half{flex-basis:calc(100% - 30px);}
+
+    /* .lineBox .addressArea{flex-wrap:wrap;} */
+    .lineBox .addressArea .address_1{flex-basis:40%;margin-right:15px;}
+    .lineBox .addressArea .address_2{flex-basis:60%;}
+    .lineBox .addressArea .address_2 .inputBase{width:calc(50% - 4px)}
+    .lineBox .addressArea .address_2 .inputBase:nth-of-type(2){margin-left:8px;}
+
+    .pop_wrap .lineBox .formInput{flex:1 0 calc(50% - 20px);}
+    .pop_wrap .lineBox .formInput.half{flex-basis:calc(100% - 20px);}
+    .pop_wrap .lineBox .addressArea .address_1{margin-right:15px;}
+    .pop_wrap .lineBox .addressArea .address_2 .inputBase:nth-of-type(2){margin-left:8px;}
+}
+
+@media only screen and (max-width:1300px){
+    .inqBox.sech .optionRow .item{max-width:550px;}
+
+    .contGorup.half .division{width:100%;}
+    .contGorup.half .division:nth-of-type(2n){margin-left:0px;margin-top:30px;}
+
+    .scheduleForm .line1 .optGroup{width:auto;margin-top:0px;}
+}
+@media only screen and (max-width:1460px){
+    .contGorup.half .numberPagination>.paging{margin:0 10px;}
+    .contGorup.half .numberPagination>button.prev{margin-left:10px;}
+    .contGorup.half .numberPagination>button.next{margin-right:10px;}
+    .contGorup.half .numberPagination>.paging>li>button{padding:0;}
+}
+@media only screen and (max-width:1024px){
+    .menuSechPop .inqBox.sech{padding-bottom:40px;}
+    .menuSechPop .inqBox.sech .resetBtn{top:auto;bottom:10px;transform:translate(0,0);}
+}

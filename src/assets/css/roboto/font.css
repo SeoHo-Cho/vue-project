@@ -1,0 +1,50 @@
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 900;
+	font-display: block;
+	src:url('woff/roboto-black.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-display: block;
+	src:url('woff/roboto-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-display: block;
+	src:url('woff/roboto-medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-display: block;
+	src:url('woff/roboto-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-display: block;
+	src:url('woff/roboto-light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 100;
+	font-display: block;
+	src:url('woff/roboto-thin.woff') format('woff');
+}

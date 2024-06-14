@@ -1,0 +1,29 @@
+.multi-line-css {
+  white-space: pre;
+}
+
+.vue-daum-postcode-container {
+  height: 350px !important;
+}
+
+.ck-content h2 {
+  font-size: 24px !important;
+}
+.ck-content h3 {
+  font-size: 18px !important;
+}
+.ck-content h4 {
+  font-size: 1em !important;
+}
+
+.ck-content li {
+  padding-left: 5px !important;
+}
+
+.ck-content ul {
+  padding-left: 10px !important;
+}
+
+.ck-content ol {
+  padding-left: 10px !important;
+}

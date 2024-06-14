@@ -1,0 +1,32 @@
+image: node:22-bookworm
+definitions:
+  services:
+    docker:
+      memory: 4096
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Docker Build and Push to NCR
+          deployment: dev-container
+          size: 2x
+          services:
+            - docker
+          artifacts:
+            - build/**
+          script:
+            - npm install -g pnpm@9.1.1 && pnpm install && pnpm run build-dev
+            - echo -n $CONTAINER_REGISTRY_SECRET | docker login --username $CONTAINER_REGISTRY_ACCESS --password-stdin $CONTAINER_REGISTRY_URI
+            - docker build --pull -t $CONTAINER_REGISTRY_URI/$BITBUCKET_REPO_SLUG:$BITBUCKET_BUILD_NUMBER -t $CONTAINER_REGISTRY_URI/$BITBUCKET_REPO_SLUG:latest .
+            - docker push $CONTAINER_REGISTRY_URI/$BITBUCKET_REPO_SLUG:$BITBUCKET_BUILD_NUMBER
+      - step:
+          name: Update Manifest
+          deployment: dev-manifest
+          script:
+            - mkdir -p ~/.ssh && (umask 077 ; echo $SSH_PRIVATE_KEY | base64 --decode > ~/.ssh/id_rsa)
+            - git clone git@bitbucket.org:cn-semas/semas-argocd-manifest.git
+            - if [[ $BITBUCKET_BRANCH == develop ]] || [[ $BITBUCKET_BRANCH == pipeline ]]; then export PROFILE="dev"; elif [[ $BITBUCKET_BRANCH == release* ]]; then PROFILE=stg; elif [[ $BITBUCKET_BRANCH == main ]]; then export PROFILE="prd"; fi
+            - wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq
+            - export IMAGE=$CONTAINER_REGISTRY_URI/$BITBUCKET_REPO_SLUG:$BITBUCKET_BUILD_NUMBER
+            - yq -i '.spec.template.spec.containers[0].image = env(IMAGE)' ./semas-argocd-manifest/ap/$BITBUCKET_REPO_SLUG/$PROFILE/Deployment.yaml
+            - cd semas-argocd-manifest && git config user.email dxlabs@megazone.co.kr && git add -A && git pull origin main && git commit -am "Updated with tag $BITBUCKET_BUILD_NUMBER by Bitbucket Pipeline" && git push
